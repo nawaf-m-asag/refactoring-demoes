@@ -14,7 +14,7 @@ namespace RefactoringSamples.ClassLevel.DataClass
             }
             if (account.AccountType == "Savings")
             {
-                decimal interest = account.Balance * this._interestRate;
+                decimal interest = this._interestRate * account.Balance;
                 account.Balance += interest;
                 return;
             }
